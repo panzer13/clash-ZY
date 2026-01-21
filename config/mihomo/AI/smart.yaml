@@ -188,13 +188,6 @@ rule-providers:
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
   apple_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
   ads: { <<: *domain, url: "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.mrs"}
- # emby_domain:
-    type: inline    # 使用内联模式，直接写入下方内容
-    behavior: domain
-    payload:
-      - easyemby.com         # 主域名 (通常匹配所有子域名)
-      - video.easyemby.com   # 您的特定线路
-      - jp01.easyemby.com    # 您的特定线路
   reject:
     type: http
     behavior: domain
