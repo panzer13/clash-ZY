@@ -87,9 +87,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    - 127.0.0.1:5333
-    #- https://dns.alidns.com/dns-query
-    #- https://doh.pub/dns-query
+    #- 127.0.0.1:5335
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
     #- https://dns.google/dns-query
     #- https://1.1.1.1/dns-query
  
