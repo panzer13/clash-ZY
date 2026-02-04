@@ -88,9 +88,9 @@ dns:
     - https://doh.pub/dns-query
   nameserver:
     #- 127.0.0.1:5335
-    - https://d.adguard-dns.com/dns-query/4829297a
-    #- https://dns.alidns.com/dns-query
-    #- https://doh.pub/dns-query
+    #- https://d.adguard-dns.com/dns-query/4829297a
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
     #- https://dns.google/dns-query
     #- https://1.1.1.1/dns-query
  
