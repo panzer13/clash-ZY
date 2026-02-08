@@ -87,10 +87,10 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver:
-    #- 127.0.0.1:5335
+    - 127.0.0.1:5335
     #- https://d.adguard-dns.com/dns-query/4829297a
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    #- https://dns.alidns.com/dns-query
+    #- https://doh.pub/dns-query
     #- https://dns.google/dns-query
     #- https://1.1.1.1/dns-query
  
@@ -135,10 +135,10 @@ rules:
   # ------------------------------------------------
   # 强制 MosDNS 使用的国外上游 DNS 走代理通道
   # 这样 ISP 只能看到你连了机场，看不到你在查什么域名
-  #- IP-CIDR,8.8.8.8/32,🚀 默认代理,no-resolve
-  #- IP-CIDR,1.1.1.1/32,🚀 默认代理,no-resolve
+  - IP-CIDR,8.8.8.8/32,🚀 默认代理,no-resolve
+  - IP-CIDR,1.1.1.1/32,🚀 默认代理,no-resolve
   # 如果你用了 Google DNS over HTTPS，也可以加域名规则
-  #- DOMAIN,dns.google,🚀 默认代理
+  - DOMAIN,dns.google,🚀 默认代理
 
   # ------------------------------------------------
   # 2. 广告拦截 & 本地隐私
