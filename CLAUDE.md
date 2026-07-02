@@ -23,7 +23,8 @@ config/
     full.ini / mini.ini  # Clash for Windows 配置
     nikki / openclash   # 插件版配置
   proxychain/         # 代理链配置（对应上游的 mihomo/proxychain.yaml）
-  singbox/1.12.x/     # Sing-box 配置
+  singbox/1.12.x/     # Sing-box 1.12.x 配置
+  singbox/1.13X/      # Sing-box 1.13X 配置（config/fork/iphone/momo）
   zijian/             # 自建节点配置（对应上游的 singbox/1.12.x/vps/）
 direct.list           # 直连规则（本地，与上游 rules/ 目录内容一致）
 proxy.list            # 代理规则
@@ -41,9 +42,12 @@ fakeipfilter.json     # FakeIP 过滤列表
 
 ## 上游同步记录
 
-- **最后同步日期**：2026-06-15
-- **上游最新 commit**：`e419bd0`（Initial commit，2026-03-27）
-- **同步操作**：
+- **最后同步日期**：2026-07-02
+- **上游最新 commit**：`80a856e`（小修改，2026-06-29）
+- **已同步 commits**：
+  - `34f0ab9`（2026-04-11）：新增 `config/singbox/1.13X/` 目录（config/fork/iphone/momo/combine）
+  - `80a856e`（2026-06-29）：README 添加禁止转载声明，删除机场广告；删除 `.github/FUNDING.yml`（本地已无此文件）
+- **历史同步操作**（2026-06-15，基于 `e419bd0`）：
   - transform.go / go_parser.py：CRLF → LF
   - smart.yaml：proxylite URL 去掉 `rules/` 前缀
 
