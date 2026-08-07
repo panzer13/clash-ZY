@@ -35,10 +35,9 @@ fakeipfilter.json     # FakeIP 过滤列表
 
 1. **台湾节点支持**：`♻️ 台湾智能` 智能组，已加入各主要策略组
 2. **EMBY 流媒体分流**：`🎬 EMBY` 策略组 + `emby_domain` inline 规则集
-3. **MosDNS DNS 防泄漏**：nameserver 指向 `127.0.0.1:5335`，DNS 规则强制 8.8.8.8/1.1.1.1 走代理
+3. **MosDNS DNS 防泄漏**：nameserver 指向 `127.0.0.1:5335`，DNS 规则强制 8.8.8.8/1.1.1.1 走代理；`configdns.yaml` 保留（上游已删除）
 4. **广告拦截**：`RULE-SET,ads,REJECT` + `RULE-SET,reject,REJECT`
-5. **URL 路径已更新**：所有配置中 `rules/proxy.list` → `proxy.list`（上游仍是旧路径）
-6. **规则分区注释**：smart.yaml 规则区用注释分成 6 个区块
+5. **规则分区注释**：smart.yaml 规则区用注释分成 6 个区块
 
 ## 上游同步记录
 
@@ -51,7 +50,7 @@ fakeipfilter.json     # FakeIP 过滤列表
   - `aecaec6`：sing-box 配置优化（inet4_range→198.19.0.0/16，fakeipfilter-cn，log info，去 client_subnet，去 cache path，外部 UI→"ui"）
   - `b81cdd8`：路由规则重构（去 Mijia Cloud，STUN/QUIC 合并+no_drop，ICMP resolve+直连）
   - `1c6d4df`：1.13X 文件整理（fork→reF1nd，iphone 删除，combine→substore-scripts）
-  - `1fe2801`：删除 proxylite 规则和 rule-provider（mihomo config/smart/configdns 全部同步）
+  - `1fe2801`：删除 proxylite 规则和 rule-provider（mihomo config.yaml/smart.yaml 同步；configdns.yaml 保留本地版本不跟）
   - `80fe5b1`：fake-ip-range 修正（mihomo 28.0.0.1/8→198.18.0.0/16）
   - `56efb3b`：删除 respect-rules（mihomo DNS 配置）
 - **历史同步操作**（2026-06-15，基于 `e419bd0`）：
