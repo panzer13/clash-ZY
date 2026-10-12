@@ -112,6 +112,7 @@ proxy-groups:
   - {name: 💶 PayPal, type: select, proxies: [🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港智能, ♻️ 日本智能, ♻️ 狮城智能, ♻️ 美国智能, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🎮 Steam, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港智能, ♻️ 台湾智能, ♻️ 日本智能, ♻️ 狮城智能, ♻️ 美国智能, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
+  - {name: 🏦 Longbridge, type: select, include-all: true, filter: "^SG-Reality$"}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港智能, ♻️ 台湾智能, ♻️ 日本智能, ♻️ 狮城智能, ♻️ 美国智能, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
@@ -156,6 +157,11 @@ rules:
   # ------------------------------------------------
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
+  - DOMAIN-SUFFIX,longbridgeapp.com,🏦 Longbridge
+  - DOMAIN-SUFFIX,longbridge.sg,🏦 Longbridge
+  - DOMAIN-SUFFIX,longbridge.hk,🏦 Longbridge
+  - DOMAIN-SUFFIX,lbkrs.com,🏦 Longbridge
+  - DOMAIN-KEYWORD,longbridge,🏦 Longbridge
 
   # ------------------------------------------------
   # 4. 特定 APP 分流 (保持原样)
