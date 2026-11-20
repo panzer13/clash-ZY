@@ -252,4 +252,4 @@ rule-providers:
   emby_domain:
     type: inline
     behavior: domain
-    payload: ["easyemby.com", "video.easyemby.com", "jp01.easyemby.com"]
+    payload: ["smart.uhdnow.com", "video.easyemby.com"]
